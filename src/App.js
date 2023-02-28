@@ -5,11 +5,12 @@ import Articles from "./pages/Articles";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Layout from "./Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profiles/:username" element={<Profile />} />
@@ -17,6 +18,7 @@ function App() {
       <Route path="/articles" element=<Articles />>
         <Route path=":id" element=<Article /> />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
