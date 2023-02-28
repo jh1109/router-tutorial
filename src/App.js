@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Layout from "./Layout";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import MyPage from "./pages/MyPage";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Route path="/articles" element=<Articles />>
         <Route path=":id" element=<Article /> />
       </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/mypage" element={<MyPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
